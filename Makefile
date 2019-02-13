@@ -9,5 +9,14 @@ test: conf.py $(TESTS)
 	${RUNTEST}
 	@touch test
 
+.PHONY: freeze
+freeze:
+	pyinstaller conf.py
+
+.PHONY: clean
 clean:
-	rm -f test *.pyc
+	rm -f test *.pyc # conf.spec dist build
+
+.PHONY: clean_freeze
+clean_freeze:
+	rm -rf conf.spec dist build

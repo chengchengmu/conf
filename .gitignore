@@ -1,2 +1,10 @@
 *.pyc
+*.swp
+
+# pyinstaller related files
+conf.spec
+dist
+build
+
+# test makefile target
 test
